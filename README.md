@@ -24,3 +24,6 @@ This is a _typical_ implementation of a simple NodeJs module in Javascript.
 Type checking is done on runtime and an unit test is provided to assert that
 this type checking is implemented.
 
+### step-2
+Starting from a copy of step-1, [JsDoc](http://usejsdoc.org/) annotations are
+added to the existing code.
