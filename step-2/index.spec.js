@@ -1,17 +1,19 @@
+//@ts-nocheck
+
 const {expect} = require('chai');
-const {increment} = require('./index');
+const {doubler} = require('./index');
 
 describe('step-2', () => {
 
-  describe('increment', () => {
+  describe('doubler', () => {
 
-    it('should increment a number', () => {
-      expect(increment(0)).to.equal(1);
+    it('should return 6, given 3', () => {
+      expect(doubler(3)).to.equal(6);
     });
 
     it('should throw an exception on a string', () => {
       try {
-        expect(increment("0")).to.equal(1);
+        expect(doubler("qqq")).to.NaN;
         expect.fail();
       }
       catch(err) {

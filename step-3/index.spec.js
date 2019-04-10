@@ -1,9 +1,8 @@
-//@ts-nocheck
-
 const {expect} = require('chai');
+const {describe, it} = require('mocha');
 const {doubler} = require('./index');
 
-describe('step-1', () => {
+describe('step-2', () => {
 
   describe('doubler', () => {
 
@@ -13,6 +12,7 @@ describe('step-1', () => {
 
     it('should throw an exception on a string', () => {
       try {
+        //@ts-ignore
         expect(doubler("qqq")).to.NaN;
         expect.fail();
       }
