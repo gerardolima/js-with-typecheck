@@ -116,3 +116,8 @@ Installation and tests
 ----------------------
 Clone this repository locally and install its dependencies on the standard way,
 by running `$ npm install`. The tests are run using `$ npm test`.
+
+Credits
+-------
+This repository was inspired by the following article:
+https://medium.com/@trukrs/type-safe-javascript-with-jsdoc-7a2a63209b76
