@@ -1,5 +1,3 @@
-//@ts-nocheck
-
 const doubler = x => {
   if(typeof(x) !== "number") throw new TypeError();
   return x *2;
