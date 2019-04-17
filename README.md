@@ -82,36 +82,6 @@ In cases when it's not possible to add scripts or dependencies to the npm
 package, still the tsc compiler can be run locally, as an extra safe-guard,
 from a global installation.
 
-step-3: using @types
---------------------
-Up to this point, the _spec_ files had been marked with `//@ts-nocheck`, to
-avoid errors due to unmet dependencies on [chai ](https://www.chaijs.com/)
-and [mocha](https://mochajs.org/), the libraries I chose for assertion and to
-run the unit tests.
-
-To solve these errors, it's necessary to install their type definitions and
-make sure the symbols are imported on the required files, using the same syntax
-used for methods or otherwise modules, constants, ... etc.
-
-> One good thing to notice here is that the type definitions for third-party
-> libraries are standard Typescript type definition files (*.d.ts) and that the
-> project [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
-> already hosts open-sourced definitions for many of the most common Javascript
-> libraries.
-
-See changes on `$ diff step-2/index.spec.ts step-3/index.spec.ts`
-
-
-```
-step-3/index.spec.js:15:24 - error TS2345: Argument of type '"qqq"' is not assignable to parameter of type 'number'.
-
-15         expect(doubler("qqq")).to.NaN;
-```
-
-This means that the _type mismatch_ error, that previously only was identified
-in the run time was caught by the **compiler**, 
-
-
 Installation and tests
 ----------------------
 Clone this repository locally and install its dependencies on the standard way,
