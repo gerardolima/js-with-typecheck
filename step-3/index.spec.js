@@ -11,14 +11,7 @@ describe('step-2', () => {
     });
 
     it('should throw an exception on a string', () => {
-      try {
-        //@ts-ignore
-        expect(doubler("qqq")).to.NaN;
-        expect.fail();
-      }
-      catch(err) {
-        expect(err).is.instanceOf(TypeError);
-      }
+      expect(()=>doubler("qqq")).to.throw(TypeError);
     });
 
   });
