@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 const {expect} = require('chai');
 const {doubler} = require('./index');
 
