@@ -1,5 +1,5 @@
-const {expect} = require('chai');
-const {doubler, mover} = require('./index');
+import { expect } from 'chai';
+import { doubler, mover } from './index.js';
 
 describe('step-1', () => {
 

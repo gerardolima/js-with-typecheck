@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "This repo shows how to leverage on Typescript tools to provide (some) type checking on Javascript projects, without neither changing a legacy codebase nor it's existing build system.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "mocha **/*.spec.js --watch",
+    "test": "mocha **/*.spec.js",
     "typecheck": "tsc --allowJs --strict --noemit --checkJs --lib ES6 --strict false **/*.js ",
     "build": "echo 'nothing to do'"
   },
@@ -26,11 +27,12 @@
   },
   "homepage": "https://github.com/gerardolima/js-with-typecheck#readme",
   "devDependencies": {
-    "@types/chai": "^4.2.14",
-    "@types/mocha": "^8.0.4",
-    "chai": "^4.2.0",
-    "mocha": "^8.2.1",
     "typescript": "^4.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@types/chai": "^4.3.13",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.0",
+    "mocha": "^10.3.0"
+  }
 }

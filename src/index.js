@@ -1,9 +1,9 @@
-const doubler = x => {
+export const doubler = x => {
   if(typeof(x) !== "number") throw new TypeError();
   return x *2;
 }
 
-const mover = (point, delta) => {
+export const mover = (point, delta) => {
   if(typeof(point.x) !== "number") throw new TypeError();
   if(typeof(point.y) !== "number") throw new TypeError();
   if(typeof(delta.x) !== "number" && typeof(delta.x) !== "undefined") throw new TypeError();
@@ -13,12 +13,5 @@ const mover = (point, delta) => {
 }
 
 // these functions cause run-time errors
-const doublerOffender = () => doubler('aa');
-const moverOffender = () => mover({x: 1, y: 2}, {x:'a'});
-
-module.exports = {
-  doubler,
-  mover,
-  doublerOffender,
-  moverOffender,
-};
+export const doublerOffender = () => doubler('aa');
+export const moverOffender = () => mover({x: 1, y: 2}, {x:'a'});
